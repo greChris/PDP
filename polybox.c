@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int abs(int x)
+long long abs1(long long x)
 {
     if (x >= 0)
     {
@@ -17,16 +17,16 @@ int main(void)
     FILE * in = fopen("polybox.in", "r");
     FILE * out = fopen("polybox.out", "w");
 
-    int result;
+    long long result = 0;
     int N;
     int iporpovlima;
     fscanf(in, "%d", &iporpovlima); //axristo akoma
     fscanf(in, "%d", &N);
 
-    int boxes[N][2];
+    long long boxes[N][2];
     for(int i = 0; i < N; i++)
     {
-        fscanf(in,"%d" "%d", &boxes[i][0], &boxes[i][1]);
+        fscanf(in,"%lld" "%lld", &boxes[i][0], &boxes[i][1]);
     }
     result+=boxes[0][0];
     result+=boxes[N-1][0];
@@ -37,7 +37,7 @@ int main(void)
     
     for(int i = 0; i < N - 1; i++)
     {
-        result += abs(boxes[i][0] - boxes[i + 1][0]);
+        result += abs1(boxes[i][0] - boxes[i + 1][0]);
     }
     
     fprintf(out, "%d", result);
