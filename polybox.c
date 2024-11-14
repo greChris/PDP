@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//den xoraei 10^40 noumera ftanei mexri 10^18
 long long abs1(long long x)
 {
     if (x >= 0)
