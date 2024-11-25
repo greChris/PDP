@@ -1,6 +1,6 @@
-/* USER: 
+/* USER: user5.37pdp
 LANG: C
-TASK: samepizzas*/
+TASK: hiring*/
 
 #include <stdio.h>
 
